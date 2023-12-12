@@ -5,11 +5,15 @@ import SideBar from "../components/SideBar/SideBar";
 
 function MainLayout(props) {
   return (
-    <Box>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Header />
-      <SideBar />
-      {props.children}
-      <Footer />
+      <Box sx={{ mt: "74px", display: "flex" }}>
+        <SideBar />
+        <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+          <main> {props.children}</main>
+          <Footer />
+        </Box>
+      </Box>
     </Box>
   );
 }
