@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-
+import BookmarksIcon from "@mui/icons-material/Bookmarks";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
-
+import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -16,6 +16,10 @@ import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 import SettingsIcon from "@mui/icons-material/Settings";
 import RadioIcon from "@mui/icons-material/Radio";
 import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
+import StarIcon from "@mui/icons-material/Star";
+import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
+import PeopleIcon from "@mui/icons-material/People";
+import ErrorIcon from "@mui/icons-material/Error";
 
 import { useState } from "react";
 import { Divider } from "@mui/material";
@@ -90,7 +94,7 @@ function SideBar() {
           selected={selectedItem === 7}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <StarIcon />
           </ListItemIcon>
           <ListItemText primary="Widgets" />
           {selectedItem === 7 ? (
@@ -124,9 +128,9 @@ function SideBar() {
           selected={selectedItem === 9}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <VerifiedUserIcon />
           </ListItemIcon>
-          <ListItemText primary="Widgets" />
+          <ListItemText primary="Authentication" />
           {selectedItem === 9 ? (
             <KeyboardArrowDownIcon />
           ) : (
@@ -141,9 +145,9 @@ function SideBar() {
           selected={selectedItem === 10}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <PeopleIcon />
           </ListItemIcon>
-          <ListItemText primary="Widgets" />
+          <ListItemText primary="Users" />
           {selectedItem === 10 ? (
             <KeyboardArrowDownIcon />
           ) : (
@@ -158,14 +162,9 @@ function SideBar() {
           selected={selectedItem === 11}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <ErrorIcon />
           </ListItemIcon>
-          <ListItemText primary="Widgets" />
-          {selectedItem === 11 ? (
-            <KeyboardArrowDownIcon />
-          ) : (
-            <KeyboardArrowRightIcon />
-          )}
+          <ListItemText primary="Error 404" />
         </ListItemButton>
 
         <ListItemButton
@@ -175,14 +174,9 @@ function SideBar() {
           selected={selectedItem === 12}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <ReportProblemIcon />
           </ListItemIcon>
-          <ListItemText primary="Widgets" />
-          {selectedItem === 12 ? (
-            <KeyboardArrowDownIcon />
-          ) : (
-            <KeyboardArrowRightIcon />
-          )}
+          <ListItemText primary="Error 505" />
         </ListItemButton>
 
         <ListItemButton
@@ -192,17 +186,13 @@ function SideBar() {
           selected={selectedItem === 13}
         >
           <ListItemIcon>
-            <RadioIcon />
+            <BookmarksIcon />
           </ListItemIcon>
-          <ListItemText primary="Widgets" />
-          {selectedItem === 13 ? (
-            <KeyboardArrowDownIcon />
-          ) : (
-            <KeyboardArrowRightIcon />
-          )}
+          <ListItemText primary="Maintence" />
         </ListItemButton>
+        <Divider />
 
-        <h3>Elements</h3>
+        <h3 style={{ fontSize: "16px", fontWeight: "600" }}>Elements</h3>
         <ListItemButton
           onClick={() => {
             setSelectedItem(2);
